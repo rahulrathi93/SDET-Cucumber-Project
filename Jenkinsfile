@@ -22,7 +22,7 @@ pipeline {
 		stage('Publish') {
 			steps {
 				//step([$class: 'Publisher', reportFilenamePattern: '**/testng-results.xml', escapeExceptionMsg: true, escapeTestDescp: true])
-				step([$class: 'CucumberTestReportPublisher', reportsDirectory: 'html:target/cucumber' , copyHTMLInWorkspace: true, ignoreUndefinedSteps: true])
+				step([$class: 'CucumberTestReportPublisher', fileIncludePattern: '**/*.html', reportsDirectory: 'target/cucumberProject' , copyHTMLInWorkspace: true, ignoreUndefinedSteps: true])
 			}
 	
 		}
