@@ -19,6 +19,7 @@ pipeline {
 			}
 	
 		}	
+		/*
 		stage('Publish') {
 			steps {
 				//step([$class: 'Publisher', reportFilenamePattern: '**/testng-results.xml', escapeExceptionMsg: true, escapeTestDescp: true])
@@ -26,7 +27,7 @@ pipeline {
 			}
 	
 		}
-	
+		*/
 		stage('Post') {
 			steps {
 				echo 'Posting....'
